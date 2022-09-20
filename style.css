@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-main: 'Staatliches';
+  --ff-second: 'Palanquin';
+  
+  --bgcolor-main: #EFF1FF;
+  --bgcolor-second: #8E9AAF;
+  --bgcolor-third:#FEEAFA;
+
+  font-size: 62.5%;
+
+}
+
+
+.page {
+  margin: 0 auto;
+  width: 38.4rem;
+  background: var(--bgcolor-main)
+}
+
+header {
+  background:var(--bgcolor-second);
+  width: 38.4rem;
+  height: 27.9rem;
+  margin-bottom: 1.4rem;
+}
+svg {
+  margin: 3.2rem 12.4rem;
+}
+
+header h1 {
+  font-family: var(--ff-main);
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  background-color: #CBC0D3;
+  padding: 0.8rem 8.7rem;
+  
+}
+
+ main {
+  max-width: 32.0rem;
+  margin: auto;
+  display: grid;
+ }
+
+ p {
+  font-family: var(--ff-second);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  
+  color: #23053A;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  padding-top: 6rem;
+ }
+
+ .cards {
+  display: grid;
+  flex-direction: column;
+  gap: 3.6rem;
+  padding-bottom: 6.0rem;
+  margin-top: 13rem;
+  border-radius: 2.0rem;
+ }
+
+ .cards img {
+  width: 100%;
+ }
+
+ .card {
+  position: relative;
+ }
+
+.card h2 {
+  position: absolute;
+  top: 16px;
+  left: 192px;
+  right: 16px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: space-evenly;
+}
+
+h2 {
+  font-family: var(--ff-main);
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: #4A4E69;
+  background: var(--bgcolor-third);
+}
+
+h2 {
+  animation: fromTop 1s backwards ;
+}
+
+.cards {
+  animation: fromBottom 500ms backwards;
+}
+
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (min-width:700px) {
+  .page {
+    max-width: 128rem;
+  }
+}
